@@ -6,10 +6,30 @@
     <description>Recent content on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 07 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://hugogbs.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Problema 1 - Checkpoint 1 - Nossa pergunta</title>
+      <link>https://hugogbs.github.io/2018/05/problema-1---checkpoint-1---nossa-pergunta/</link>
+      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugogbs.github.io/2018/05/problema-1---checkpoint-1---nossa-pergunta/</guid>
+      <description>library(ggplot2) library(dplyr) library(tidyr) library(readr) theme_set(theme_minimal()) Descrição dos dados O conjunto de dados a ser estudado aqui, reune informações sobre a avaliação dada no IBDM de algumas séries populares na atualidade. Os dados foram coletados através de métodos descritos aqui.
+A base da dados contêm informações de cada episódio da série, sua avaliação no IBDM, o número de votos recebidos por cada episódio e as proporções de votos de 1 a 10 para cada episódio.</description>
+    </item>
+    
+    <item>
+      <title>Problema 1 - Checkpoint 4 - Relatório Final</title>
+      <link>https://hugogbs.github.io/2018/05/problema-1---checkpoint-4---relat%C3%B3rio-final/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugogbs.github.io/2018/05/problema-1---checkpoint-4---relat%C3%B3rio-final/</guid>
+      <description>library(tidyr) library(dplyr) library(readr) library(ggplot2) theme_set(theme_minimal()) series &amp;lt;- read_csv(&amp;quot;series_from_imdb.csv&amp;quot;) O episódios season finale são considerados melhores que os demais? Os episódios que encerram as temporadas são os que costumam causar mais frisson, em geral eles são repletos de suspense, reviravoltas, drama e tudo mais que prenda a nossa atenção e nos deixe sedentos pela próxima temporada.
+Mas será que as séries estão conseguindo realmente fazer isso? Será que esses episódios são melhores que os demais?</description>
+    </item>
     
     <item>
       <title>Hello R Markdown</title>
@@ -139,6 +159,15 @@ summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
       <guid>https://hugogbs.github.io/2013/01/japanese-test/</guid>
       <description>&lt;p&gt;This is a Japanese test post to show you how japanese is displayed.
 &lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://hugogbs.github.io/1/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugogbs.github.io/1/01/</guid>
+      <description>Problema 1 - Checkpoint 4 - Relatório Final           code{white-space: pre;} pre:not([class]) { background-color: white; }  if (window.hljs &amp;&amp; document.readyState &amp;&amp; document.readyState === &#34;complete&#34;) { window.setTimeout(function() { hljs.initHighlighting(); }, 0); }  h1 { font-size: 34px; } h1.title { font-size: 38px; } h2 { font-size: 30px; } h3 { font-size: 24px; } h4 { font-size: 18px; } h5 { font-size: 16px; } h6 { font-size: 12px; } .</description>
     </item>
     
   </channel>

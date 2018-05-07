@@ -1,0 +1,803 @@
+
+
+  
+    
+  
+
+
+  
+
+
+
+
+  
+
+
+  
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.40.2 with theme Tranquilpeak 0.4.3-BETA">
+    <title>Problema 1 - Checkpoint 1 - Nossa pergunta</title>
+    <meta name="author" content="Hugo Gabriel">
+    <meta name="keywords" content="">
+
+    <link rel="icon" href="https://hugogbs.github.io/favicon.png">
+    
+
+    
+    <meta name="description" content="library(ggplot2) library(dplyr) library(tidyr) library(readr) theme_set(theme_minimal()) Descrição dos dados O conjunto de dados a ser estudado aqui, reune informações sobre a avaliação dada no IBDM de algumas séries populares na atualidade. Os dados foram coletados através de métodos descritos aqui.
+A base da dados contêm informações de cada episódio da série, sua avaliação no IBDM, o número de votos recebidos por cada episódio e as proporções de votos de 1 a 10 para cada episódio.">
+    <meta property="og:description" content="library(ggplot2) library(dplyr) library(tidyr) library(readr) theme_set(theme_minimal()) Descrição dos dados O conjunto de dados a ser estudado aqui, reune informações sobre a avaliação dada no IBDM de algumas séries populares na atualidade. Os dados foram coletados através de métodos descritos aqui.
+A base da dados contêm informações de cada episódio da série, sua avaliação no IBDM, o número de votos recebidos por cada episódio e as proporções de votos de 1 a 10 para cada episódio.">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Problema 1 - Checkpoint 1 - Nossa pergunta">
+    <meta property="og:url" content="/2018/05/problema-1---checkpoint-1---nossa-pergunta/">
+    <meta property="og:site_name" content="Hugo tranquilpeak theme">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Hugo tranquilpeak theme">
+    <meta name="twitter:description" content="library(ggplot2) library(dplyr) library(tidyr) library(readr) theme_set(theme_minimal()) Descrição dos dados O conjunto de dados a ser estudado aqui, reune informações sobre a avaliação dada no IBDM de algumas séries populares na atualidade. Os dados foram coletados através de métodos descritos aqui.
+A base da dados contêm informações de cada episódio da série, sua avaliação no IBDM, o número de votos recebidos por cada episódio e as proporções de votos de 1 a 10 para cada episódio.">
+    
+    
+
+    
+    
+
+    
+      <meta property="og:image" content="//www.gravatar.com/avatar/7fb79e64ea377f131cd886507dd37291?s=640">
+    
+
+    
+    
+    
+
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://hugogbs.github.io/css/style-jsjn0006wyhpyzivf6yceb31gvpjatbcs3qzjvlumobfnugccvobqwxnnaj8.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://hugogbs.github.io/">Hugo tranquilpeak theme</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://hugogbs.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="//www.gravatar.com/avatar/7fb79e64ea377f131cd886507dd37291?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://hugogbs.github.io/#about">
+          <img class="sidebar-profile-picture" src="//www.gravatar.com/avatar/7fb79e64ea377f131cd886507dd37291?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Hugo Gabriel</h4>
+        
+          <h5 class="sidebar-profile-bio">Super bio with markdown support <strong>COOL</strong></h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hugogbs.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hugogbs.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hugogbs.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hugogbs.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hugogbs.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/kakawait" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stackoverflow.com/users/636472/kakawait" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+      
+      <span class="sidebar-button-desc">Stack Overflow</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://hugogbs.github.io/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      Problema 1 - Checkpoint 1 - Nossa pergunta
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-05-07T00:00:00Z">
+        
+  May 7, 2018
+
+      </time>
+    
+    
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <pre class="r"><code>library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(readr)
+theme_set(theme_minimal())</code></pre>
+<div id="descricao-dos-dados" class="section level2">
+<h2>Descrição dos dados</h2>
+<p>O conjunto de dados a ser estudado aqui, reune informações sobre a avaliação dada no IBDM de algumas séries populares na atualidade. Os dados foram coletados através de métodos descritos <a href="https://github.com/nazareno/imdb-series">aqui</a>.</p>
+<p>A base da dados contêm informações de cada episódio da série, sua avaliação no IBDM, o número de votos recebidos por cada episódio e as proporções de votos de 1 a 10 para cada episódio.</p>
+<p>Nesta análise serão estudadas as seguintes séries, que foram escolhidas aleatóriamente do conjunto de dados disponível:</p>
+<ul>
+<li>Agents of S.H.I.E.L.D.</li>
+<li>House of Cards</li>
+<li>Orphan Black</li>
+<li>The 100</li>
+<li>The Blacklist</li>
+<li>Vikings</li>
+</ul>
+<pre class="r"><code>series &lt;- read_csv(&quot;series_from_imdb.csv&quot;) %&gt;% 
+  filter(series_name %in% c(&quot;Agents of S.H.I.E.L.D.&quot;, &quot;House of Cards&quot;, &quot;Orphan Black&quot;, &quot;The 100&quot;, &quot;The Blacklist&quot;, &quot;Vikings&quot;))</code></pre>
+</div>
+<div id="melhor-avaliada" class="section level2">
+<h2>Melhor avaliada</h2>
+<p>Tentaremos analizar o quão bem avaliada é uma série, a príncípio vejamos como é a classificação das séries escolhidas de acordo com os votos dos usuários no IMDB.</p>
+<pre class="r"><code>ggplot(data = series, aes(x = series_name, y = UserRating)) + 
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(aes(color = series_name, alpha = 0.2)) </code></pre>
+<p><img src="https://hugogbs.github.io/post/LAB1/p1c1_files/figure-html/unnamed-chunk-3-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p>Como podemos observar no boxplot acima as avalições das séries se concentram, em sua maioria, em torno de 7.5 e 9.5, com medianas sempre entre 8 e 9.</p>
+<p>De acordo com o gráfico <strong>Agents of S.H.I.E.L.D., House of Cards e Orphan Black</strong> então empatadas como as séries de melhor avaliação se observarmos a mediana dos votos. As três com 8.6 de mediana.</p>
+<p>As demais séries estão relativamente próximas das que estão em primeiro, a que mais se distancia é <em>The Blacklist</em> com uma diferença de apenas 0.3, ou seja, uma mediana de 8.3.</p>
+<p>Nota-se ainda o quão dispersos estão os dados, com destaque especial para <em>The 100</em> que possui algumas observações bastante dispersas, chegando até a avaliações menores que 6 em alguns episódios.</p>
+<p>Vejamos agora uma observação ainda mais sumarizada das variáveis através da média e da mediana dos votos no IMDB.</p>
+<pre class="r"><code>sum_series &lt;- series %&gt;%
+  group_by(series_name) %&gt;%
+  summarise(total_eps = n(),
+            media_UR = mean(UserRating),
+            mediana_UR = median(UserRating)
+            )
+
+ggplot(data = sum_series, aes(x = series_name)) +
+  geom_point(aes(x = series_name, y = media_UR, color = &quot;Média&quot;)) +
+  geom_point(aes(x = series_name, y = mediana_UR, color = &quot;Mediana&quot;))</code></pre>
+<p><img src="https://hugogbs.github.io/post/LAB1/p1c1_files/figure-html/unnamed-chunk-4-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p>Observa-se que os valores de média e mediana são, em geral, próximos, significando que ambos são representativos para os dados.</p>
+<div id="uma-nova-metrica" class="section level3">
+<h3>Uma nova métrica</h3>
+<p>Tentaremos usar uma métrica diferente para perceber se uma série é boa ou não.<br />
+Veremos a proporção de pessoas que amou a série, ou seja, que deu 10 na avaliação dos episódios</p>
+<pre class="r"><code>ggplot(data = series, aes(x = series_name, y = r10)) +
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(aes(color = series_name, alpha = .2))</code></pre>
+<p><img src="https://hugogbs.github.io/post/LAB1/p1c1_files/figure-html/unnamed-chunk-5-1.png" width="960" style="display: block; margin: auto;" /> Através desse parâmero, curiosamente, os dados se invertem, <strong>The 100</strong> que na avalição anterior era a de menor média e a de 2ª menor mediana é a série mais recebe nota 10 dentre as observadas.<br />
+Por outro lado, <strong>House of Cards</strong> que figurava entre as melhores é a que menos tem avaliações com nota 10.</p>
+</div>
+</div>
+<div id="regularidade-dos-episodios" class="section level2">
+<h2>Regularidade dos episódios</h2>
+<p>Para avaliar a regularidade dos episódios, traçaremos a linha do tempo dos episódios de cada série.</p>
+<pre class="r"><code>ggplot(data = series, aes(x = series_ep, y = UserRating, color = series_name)) +
+  geom_line() + 
+  geom_point(size = 0.8) + 
+  facet_wrap(~series_name, scales = &#39;free_x&#39;, ncol = 2)</code></pre>
+<p><img src="https://hugogbs.github.io/post/LAB1/p1c1_files/figure-html/unnamed-chunk-6-1.png" width="960" style="display: block; margin: auto;" /> Essa visualização nos permite verificar com precisão o desempenho de cade episódio de cada série, no entanto não nos ajuda muito a compreender a tendência dos dados, para tal, usaremos a visualização a seguir.</p>
+<pre class="r"><code>ggplot(data = series, aes(y = UserRating , x = series_ep, color = series_name)) +
+  geom_smooth() +
+  facet_wrap(~series_name, scales = &#39;free_x&#39;, ncol = 2)</code></pre>
+<p><img src="https://hugogbs.github.io/post/LAB1/p1c1_files/figure-html/unnamed-chunk-7-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p>Agora é possível observar o comportamento geral de cada série, note que esta visualizão é uma aproximação da anterior. Vemos que em geral não existem variações bruscas na qualidade dos episódios das séries, exceto por <em>The 100</em> que apresentou uma sequência de valores considerávelmente baixos.</p>
+<p>Outra observação que pode ser feita é que as séries estão ganhando o gosto do público e sendo melhor avaliadas do que nos seus episódios iniciais.</p>
+</div>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hugogbs.github.io/2018/05/problema-1---checkpoint-4---relat%C3%B3rio-final/" data-tooltip="Problema 1 - Checkpoint 4 - Relatório Final">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://hugogbs.github.io/2018/05/problema-1---checkpoint-1---nossa-pergunta/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://hugogbs.github.io/2018/05/problema-1---checkpoint-1---nossa-pergunta/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://hugogbs.github.io/2018/05/problema-1---checkpoint-1---nossa-pergunta/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2018 Hugo Gabriel. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hugogbs.github.io/2018/05/problema-1---checkpoint-4---relat%C3%B3rio-final/" data-tooltip="Problema 1 - Checkpoint 4 - Relatório Final">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://hugogbs.github.io/2018/05/problema-1---checkpoint-1---nossa-pergunta/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://hugogbs.github.io/2018/05/problema-1---checkpoint-1---nossa-pergunta/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://hugogbs.github.io/2018/05/problema-1---checkpoint-1---nossa-pergunta/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhugogbs.github.io%2F2018%2F05%2Fproblema-1---checkpoint-1---nossa-pergunta%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhugogbs.github.io%2F2018%2F05%2Fproblema-1---checkpoint-1---nossa-pergunta%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhugogbs.github.io%2F2018%2F05%2Fproblema-1---checkpoint-1---nossa-pergunta%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="//www.gravatar.com/avatar/7fb79e64ea377f131cd886507dd37291?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Hugo Gabriel</h4>
+    
+      <div id="about-card-bio">Super bio with markdown support <strong>COOL</strong></div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Your job title
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Brazil
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hugogbs.github.io/2018/05/problema-1---checkpoint-1---nossa-pergunta/">
+                <h3 class="media-heading">Problema 1 - Checkpoint 1 - Nossa pergunta</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  May 5, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">library(ggplot2) library(dplyr) library(tidyr) library(readr) theme_set(theme_minimal()) Descrição dos dados O conjunto de dados a ser estudado aqui, reune informações sobre a avaliação dada no IBDM de algumas séries populares na atualidade. Os dados foram coletados através de métodos descritos aqui.
+A base da dados contêm informações de cada episódio da série, sua avaliação no IBDM, o número de votos recebidos por cada episódio e as proporções de votos de 1 a 10 para cada episódio.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hugogbs.github.io/2018/05/problema-1---checkpoint-4---relat%C3%B3rio-final/">
+                <h3 class="media-heading">Problema 1 - Checkpoint 4 - Relatório Final</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  May 5, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">library(tidyr) library(dplyr) library(readr) library(ggplot2) theme_set(theme_minimal()) series &lt;- read_csv(&quot;series_from_imdb.csv&quot;) O episódios season finale são considerados melhores que os demais? Os episódios que encerram as temporadas são os que costumam causar mais frisson, em geral eles são repletos de suspense, reviravoltas, drama e tudo mais que prenda a nossa atenção e nos deixe sedentos pela próxima temporada.
+Mas será que as séries estão conseguindo realmente fazer isso? Será que esses episódios são melhores que os demais?</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hugogbs.github.io/2015/07/hello-r-markdown/">
+                <h3 class="media-heading">Hello R Markdown</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jul 7, 2015
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+You can embed an R code chunk like this:
+summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hugogbs.github.io/2015/06/welcome-to-tranquilpeak-0.4.3-beta/">
+                <h3 class="media-heading">Welcome to Tranquilpeak 0.4.3-BETA</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2015
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Tranquilpeak is a gorgeous responsive theme for Hugo blog framework. It has many features and integrated services to improve user experience.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hugogbs.github.io/2015/05/elements-showcase/">
+                <h3 class="media-heading">Elements showcase</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  May 5, 2015
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Check out how Tranquilpeak theme display well HTML elements (title, paragraph, blockquote, table and more..). It&rsquo;s simple and elegant.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hugogbs.github.io/2015/05/cover-image-showcase/">
+                <h3 class="media-heading">Cover image showcase</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  May 5, 2015
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Tranquilpeak integrate a unique &ldquo;cover image&rdquo; feature. Open this post to see how this feature sublimate your article.</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hugogbs.github.io/2015/03/highlighted-code-showcase/">
+                <h3 class="media-heading">highlighted code showcase</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2015
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Tranquilpeak Hugo theme have its own theme to highlight source code. It&rsquo;s based on GitHub theme: simple and elegant. Check out how it sublimate source codes.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hugogbs.github.io/2014/10/tags-plugins-showcase/">
+                <h3 class="media-heading">Tags plugins showcase</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2014
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>This post is used to show how tag plugins are displayed. See <a href="https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md#tags">docs</a> for more info.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hugogbs.github.io/2014/08/hidden-social-section-showcase/">
+                <h3 class="media-heading">Hidden social section showcase</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Aug 8, 2014
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>This post is used to show how a site looks if the social section is hidden.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://hugogbs.github.io/2014/08/hidden-tag-section-showcase/">
+                <h3 class="media-heading">Hidden tag section showcase</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Aug 8, 2014
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>This post is used to show how a site looks if the tag section is hidden.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         16 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://hugogbs.github.io/images/cover.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://hugogbs.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/hugogbs.github.io\/2018\/05\/problema-1---checkpoint-1---nossa-pergunta\/';
+          
+            this.page.identifier = '\/2018\/05\/problema-1---checkpoint-1---nossa-pergunta\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+    
+  </body>
+</html>
+
